@@ -1,0 +1,123 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f6f8fa;
+  margin: 0;
+  color: #222;
+}
+
+header {
+  background: #22223b;
+  color: #fff;
+  padding: 2rem 1rem 1rem 1rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+#controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  margin-bottom: 1.5rem;
+}
+
+#controls input[type="file"] {
+  font-size: 1rem;
+}
+
+#controls button {
+  background: #4a4e69;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#controls button:hover {
+  background: #22223b;
+}
+
+#visualization {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.layer {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  padding: 1.5rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 220px;
+}
+
+.layer h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #4a4e69;
+  margin-bottom: 1rem;
+}
+
+canvas {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #f0f0f0;
+  margin-bottom: 0.5rem;
+}
+
+.feature-maps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.feature-maps canvas {
+  width: 64px;
+  height: 64px;
+  border: 1px solid #bbb;
+  background: #fafafa;
+}
+
+#dense-activations, #output-values {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#dense-activations div, #output-values div {
+  background: #e0e1dd;
+  border-radius: 6px;
+  padding: 0.5rem 0.8rem;
+  font-size: 1rem;
+  min-width: 32px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem 0 1rem 0;
+  color: #888;
+  font-size: 1rem;
+  background: none;
+}

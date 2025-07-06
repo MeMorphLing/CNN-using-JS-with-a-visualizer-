@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CNN Visualizer from Scratch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Convolutional Neural Network Visualizer</h1>
+    <p>Built from scratch in JavaScript – No Libraries!</p>
+  </header>
+  <section id="controls">
+    <input type="file" id="image-upload" accept="image/*">
+    <button id="step-btn" style="display:none;">Step Through Layers</button>
+    <button id="reset-btn">Reset</button>
+  </section>
+  <main id="visualization">
+    <section class="layer" id="input-layer">
+      <h2>Input Image</h2>
+      <canvas id="input-canvas" width="64" height="64"></canvas>
+    </section>
+    <section class="layer" id="conv-layer">
+      <h2>Convolution Layer</h2>
+      <div class="param-info" id="conv-params"></div>
+      <div id="conv-feature-maps" class="feature-maps"></div>
+    </section>
+    <section class="layer" id="activation-layer">
+      <h2>Activation (ReLU)</h2>
+      <div id="activation-maps" class="feature-maps"></div>
+    </section>
+    <section class="layer" id="pooling-layer">
+      <h2>Pooling Layer</h2>
+      <div id="pooling-maps" class="feature-maps"></div>
+    </section>
+    <section class="layer" id="dense-layer">
+      <h2>Dense Layer</h2>
+      <div class="param-info" id="dense-params"></div>
+      <div id="dense-activations"></div>
+    </section>
+    <section class="layer" id="output-layer">
+      <h2>Output</h2>
+      <div class="param-info" id="output-params"></div>
+      <div id="output-values"></div>
+    </section>
+  </main>
+  <footer>
+    <p>Made by MTH | No external libraries</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
